@@ -35,6 +35,8 @@ import SunburstChartPlugin from '@superset-ui/legacy-plugin-chart-sunburst';
 import TableChartPlugin from '@superset-ui/plugin-chart-table';
 import TreemapChartPlugin from '@superset-ui/legacy-plugin-chart-treemap';
 import { WordCloudChartPlugin } from '@superset-ui/plugin-chart-word-cloud';
+import { SupersetPluginChartMultiAxisLineChart } from 'superset-plugin-chart-multi-axis-line-chart';
+
 import WorldMapChartPlugin from '@superset-ui/legacy-plugin-chart-world-map';
 import {
   AreaChartPlugin,
@@ -166,6 +168,8 @@ export default class MainPreset extends Preset {
         new TimeGrainFilterPlugin().configure({ key: 'filter_timegrain' }),
         new EchartsTreeChartPlugin().configure({ key: 'tree_chart' }),
         new HandlebarsChartPlugin().configure({ key: 'handlebars' }),
+        new SupersetPluginChartMultiAxisLineChart().configure({ key: 'multi-axis-line-chart' }),
+
         ...experimentalplugins,
       ],
     });
